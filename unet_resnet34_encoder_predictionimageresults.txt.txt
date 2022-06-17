@@ -1,0 +1,17 @@
+binary XE score = 0.101479
+mean and std of N_match/N_csv (recall) = 0.507252, 0.178354
+mean and std of N_match/(N_match + (N_detect-N_match))
+              (precision) = 0.831016, 0.147635
+mean and std of F_1 score = 0.602464, 0.127639
+mean and std of (N_detect - N_match)/N_detect (fraction
+              of craters that are new) = 0.132517, 0.096687
+mean and std of (N_detect - N_match)/N_csv (fraction of
+              "craters that are new, 2) = 0.105142, 0.120167
+median and IQR fractional longitude diff = 0.104985, 25:0.085673, 75:0.126423
+median and IQR fractional latitude diff = 0.114596, 25:0.096147, 75:0.139927
+median and IQR fractional radius diff = 0.085444, 25:0.071780, 75:0.099320
+mean and std of frac_duplicates: 0.015916, 0.031081
+mean and std of maximum detected pixel radius in an image =
+              19.748315, 6.597550
+absolute maximum detected pixel radius over all images =
+              40.000000

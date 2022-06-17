@@ -1,0 +1,50 @@
+2022-06-15 17:27:08.710505: I tensorflow/stream_executor/cuda/cuda_dnn.cc:368] Loaded cuDNN version 8100
+2022-06-15 17:27:11.024770: I tensorflow/stream_executor/cuda/cuda_blas.cc:1786] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+skipping iteration 19,N_csv=3,N_detect=1,N_match=0
+skipping iteration 72,N_csv=5,N_detect=1,N_match=0
+skipping iteration 115,N_csv=6,N_detect=0,N_match=0
+skipping iteration 167,N_csv=4,N_detect=0,N_match=0
+skipping iteration 238,N_csv=3,N_detect=2,N_match=0
+skipping iteration 358,N_csv=7,N_detect=0,N_match=0
+16/16 [==============================] - 2s 70ms/step - loss: 0.0467
+binary XE score = 0.046704
+mean and std of N_match/N_csv (recall) = 0.474254, 0.200337
+mean and std of N_match/(N_match + (N_detect-N_match))
+              (precision) = 0.912562, 0.126641
+mean and std of F_1 score = 0.598455, 0.168293
+mean and std of (N_detect - N_match)/N_detect (fraction
+              of craters that are new) = 0.069739, 0.092327
+mean and std of (N_detect - N_match)/N_csv (fraction of
+              "craters that are new, 2) = 0.046576, 0.080038
+median and IQR fractional longitude diff = 0.106574, 25:0.078107, 75:0.130900
+median and IQR fractional latitude diff = 0.111629, 25:0.081398, 75:0.137969
+median and IQR fractional radius diff = 0.081953, 25:0.060822, 75:0.100927
+mean and std of frac_duplicates: 0.006567, 0.021519
+mean and std of maximum detected pixel radius in an image =
+              16.787293, 7.552143
+absolute maximum detected pixel radius over all images =
+              40.000000
+
+
+*********Custom Loss*********
+skipping iteration 244,N_csv=4,N_detect=0,N_match=0
+skipping iteration 417,N_csv=3,N_detect=0,N_match=0
+skipping iteration 466,N_csv=6,N_detect=0,N_match=0
+16/16 [==============================] - 1s 70ms/step - loss: 0.1013
+binary XE score = 0.101313
+mean and std of N_match/N_csv (recall) = 0.435627, 0.185458
+mean and std of N_match/(N_match + (N_detect-N_match))
+              (precision) = 0.893622, 0.105600
+mean and std of F_1 score = 0.560851, 0.155203
+mean and std of (N_detect - N_match)/N_detect (fraction
+              of craters that are new) = 0.088643, 0.079310
+mean and std of (N_detect - N_match)/N_csv (fraction of
+              "craters that are new, 2) = 0.054245, 0.068239
+median and IQR fractional longitude diff = 0.106022, 25:0.088177, 75:0.125829
+median and IQR fractional latitude diff = 0.105861, 25:0.083227, 75:0.128658
+median and IQR fractional radius diff = 0.084752, 25:0.069925, 75:0.099610
+mean and std of frac_duplicates: 0.018593, 0.040428
+mean and std of maximum detected pixel radius in an image =
+              20.294118, 7.275099
+absolute maximum detected pixel radius over all images =
+              40.000000

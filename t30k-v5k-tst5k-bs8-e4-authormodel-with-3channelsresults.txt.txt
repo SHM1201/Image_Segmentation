@@ -1,0 +1,111 @@
+Microsoft Windows [Version 10.0.22621.160]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\Shahriyar_Haseeb\Code>cda_env\Scripts\activate.bat
+
+(cda_env) D:\Shahriyar_Haseeb\Code>cd cda_env
+
+(cda_env) D:\Shahriyar_Haseeb\Code\cda_env>python prediction_onthefirstone
+2022-06-15 11:01:25.982632: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-15 11:01:26.566748: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21676 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:01:00.0, compute capability: 8.6
+Traceback (most recent call last):
+  File "D:\Shahriyar_Haseeb\Code\cda_env\prediction_onthefirstone", line 16, in <module>
+    proc.preprocess(sample_data)
+  File "D:\Shahriyar_Haseeb\Code\cda_env\DeepMoon\utils\processing.py", line 18, in preprocess
+    Data[key][0] = Data[key][0].reshape(len(Data[key][0]), dim, dim, 3)
+ValueError: cannot reshape array of size 32768000 into shape (500,256,256,3)
+
+(cda_env) D:\Shahriyar_Haseeb\Code\cda_env>python prediction_onthefirstone
+2022-06-15 11:03:26.188554: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-15 11:03:26.504103: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21676 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:01:00.0, compute capability: 8.6
+Done with PREPROCESSING!!!!!!
+
+*********Custom Loss*********
+2022-06-15 11:06:07.590214: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 3932160000 exceeds 10% of free system memory.
+2022-06-15 11:06:15.397790: I tensorflow/stream_executor/cuda/cuda_dnn.cc:368] Loaded cuDNN version 8100
+skipping iteration 115,N_csv=6,N_detect=0,N_match=0
+skipping iteration 167,N_csv=4,N_detect=0,N_match=0
+skipping iteration 583,N_csv=4,N_detect=2,N_match=0
+skipping iteration 883,N_csv=3,N_detect=0,N_match=0
+skipping iteration 886,N_csv=3,N_detect=3,N_match=0
+skipping iteration 932,N_csv=4,N_detect=1,N_match=0
+skipping iteration 959,N_csv=4,N_detect=0,N_match=0
+skipping iteration 1148,N_csv=6,N_detect=0,N_match=0
+skipping iteration 1318,N_csv=3,N_detect=0,N_match=0
+skipping iteration 1416,N_csv=7,N_detect=1,N_match=0
+skipping iteration 1627,N_csv=3,N_detect=1,N_match=0
+skipping iteration 1639,N_csv=6,N_detect=0,N_match=0
+skipping iteration 1757,N_csv=3,N_detect=0,N_match=0
+skipping iteration 1822,N_csv=3,N_detect=0,N_match=0
+skipping iteration 1954,N_csv=3,N_detect=0,N_match=0
+skipping iteration 2365,N_csv=4,N_detect=0,N_match=0
+skipping iteration 2748,N_csv=3,N_detect=0,N_match=0
+skipping iteration 2938,N_csv=4,N_detect=0,N_match=0
+skipping iteration 3080,N_csv=5,N_detect=0,N_match=0
+skipping iteration 3122,N_csv=3,N_detect=0,N_match=0
+skipping iteration 3152,N_csv=8,N_detect=1,N_match=0
+skipping iteration 3204,N_csv=4,N_detect=0,N_match=0
+skipping iteration 3246,N_csv=3,N_detect=0,N_match=0
+skipping iteration 3323,N_csv=3,N_detect=1,N_match=0
+skipping iteration 3350,N_csv=3,N_detect=0,N_match=0
+skipping iteration 3381,N_csv=3,N_detect=0,N_match=0
+skipping iteration 3471,N_csv=3,N_detect=0,N_match=0
+skipping iteration 3502,N_csv=3,N_detect=1,N_match=0
+skipping iteration 3690,N_csv=4,N_detect=1,N_match=0
+skipping iteration 3781,N_csv=3,N_detect=0,N_match=0
+skipping iteration 3812,N_csv=3,N_detect=0,N_match=0
+skipping iteration 3818,N_csv=4,N_detect=1,N_match=0
+skipping iteration 4105,N_csv=3,N_detect=0,N_match=0
+skipping iteration 4757,N_csv=3,N_detect=1,N_match=0
+skipping iteration 4758,N_csv=3,N_detect=0,N_match=0
+2022-06-15 11:22:25.623900: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 3932160000 exceeds 10% of free system memory.
+157/157 [==============================] - 28s 179ms/step - loss: 0.0474
+binary XE score = 0.047413
+mean and std of N_match/N_csv (recall) = 0.549476, 0.199458
+mean and std of N_match/(N_match + (N_detect-N_match))
+              (precision) = 0.836549, 0.149381
+mean and std of F_1 score = 0.637838, 0.151469
+mean and std of (N_detect - N_match)/N_detect (fraction
+              of craters that are new) = 0.127203, 0.104532
+mean and std of (N_detect - N_match)/N_csv (fraction of
+              "craters that are new, 2) = 0.102195, 0.106944
+median and IQR fractional longitude diff = 0.101090, 25:0.077248, 75:0.123817
+median and IQR fractional latitude diff = 0.099513, 25:0.076157, 75:0.123374
+median and IQR fractional radius diff = 0.075879, 25:0.057127, 75:0.093335
+mean and std of frac_duplicates: 0.006997, 0.023860
+mean and std of maximum detected pixel radius in an image =
+              18.749507, 7.744226
+absolute maximum detected pixel radius over all images =
+              40.000000
+
+
+*********Custom Loss*********
+2022-06-15 11:23:14.697407: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 3932160000 exceeds 10% of free system memory.
+skipping iteration 417,N_csv=3,N_detect=2,N_match=0
+skipping iteration 4024,N_csv=3,N_detect=1,N_match=0
+skipping iteration 4428,N_csv=4,N_detect=2,N_match=0
+2022-06-15 11:43:12.977749: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 3932160000 exceeds 10% of free system memory.
+157/157 [==============================] - 29s 181ms/step - loss: 0.0945
+binary XE score = 0.094452
+mean and std of N_match/N_csv (recall) = 0.560557, 0.198353
+mean and std of N_match/(N_match + (N_detect-N_match))
+              (precision) = 0.809171, 0.142998
+mean and std of F_1 score = 0.632411, 0.130064
+mean and std of (N_detect - N_match)/N_detect (fraction
+              of craters that are new) = 0.149043, 0.094452
+mean and std of (N_detect - N_match)/N_csv (fraction of
+              "craters that are new, 2) = 0.127098, 0.123958
+median and IQR fractional longitude diff = 0.098973, 25:0.082431, 75:0.115827
+median and IQR fractional latitude diff = 0.096372, 25:0.078694, 75:0.114236
+median and IQR fractional radius diff = 0.080282, 25:0.067228, 75:0.094739
+mean and std of frac_duplicates: 0.013714, 0.028238
+mean and std of maximum detected pixel radius in an image =
+              23.453974, 7.330024
+absolute maximum detected pixel radius over all images =
+              40.000000
+
+Closing remaining open files:D:\Shahriyar_Haseeb\Datasets\test_craters.hdf5...doneD:\Shahriyar_Haseeb\Datasets\train_craters.hdf5...doneD:\Shahriyar_Haseeb\Datasets\dev_craters.hdf5...done
+
+(cda_env) D:\Shahriyar_Haseeb\Code\cda_env>
